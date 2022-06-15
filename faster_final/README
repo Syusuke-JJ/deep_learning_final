@@ -1,0 +1,7 @@
+对应不同的初始化，只需要在运行python train.py的命令即可
+1.随机初始化 python train.py
+2.ImageNet初始化 python train.py -config imagenet_pre_config.py或者在train文件的line 25修改default="./config/imagenet_pre_config.py"
+3.CoCo初始化 python train.py -config coco_pre_config.py或者在train文件的line 25修改default="./config/coco_pre_config.py"
+训练只需要讲config中每个py文件data_root改成相应的存储目录
+可视化运行visual.py即可
+tensorboard可视化结果存储在"work_dirs/faster_rcnn_r50_fpn_1(或者2或者3)/tf_logs/"中
