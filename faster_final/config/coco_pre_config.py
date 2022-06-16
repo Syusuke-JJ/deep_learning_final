@@ -28,7 +28,7 @@ test_pipeline = [
         ])
 ]
 data = dict(
-    samples_per_gpu=8,
+    samples_per_gpu=4,
     workers_per_gpu=2,
     train=dict(
         type='RepeatDataset',
@@ -55,7 +55,7 @@ evaluation = dict(interval=1, metric='mAP')
 # model settings
 model = dict(
     type='FasterRCNN',
-    init_cfg=dict(type='Pretrained', checkpoint='./pretrained_models/mask_rcnn_r50_fpn_mstrain-poly_3x_coco_20210524_201154-21b550bb.pth'),
+    init_cfg=dict(type='Pretrained', checkpoint='./pretrained_models/mask_rcnn_r50_fpn_1x_coco_20200205-d4b0c5d6.pth'),
     backbone=dict(
         type='ResNet',
         depth=50,
